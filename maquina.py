@@ -23,3 +23,18 @@ class MaquinaTuring:
         self.cinta = []
         self.posicion = 0
         self.contador_pasos = 0
+
+    def cargar_entrada(self, cadena):
+        self.reset()
+        # Si la entrada esta vacia usamos el simbolo blanco por defecto
+        self.cinta = list(cadena) if cadena else [self.blanco]
+        self.posicion = 0
+
+    def imprimir_config(self):
+        # Muestra el estado actual y resalta la cabeza en la cinta
+        copia_cinta = list(self.cinta)
+        actual = copia_cinta[self.posicion]
+        copia_cinta[self.posicion] = f"[{actual}]"
+        
+        cinta_visual = "".join(copia_cinta)
+        print(f"Paso: {self.contador_pasos:<4} | Est: {self.estado_actual:<4} | Pos: {self.posicion:<3} | Cinta: {cinta_visual}")
