@@ -146,6 +146,3 @@ T(n) = O(n · φⁿ)
 **Instructor**: Gabriel Brolo  
 **Sección**: 10
 
----
-
-**Proyecto No. 1** - Análisis y Diseño de Algoritmos - 2024
